@@ -1,0 +1,28 @@
+name: Publish
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Get Dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: onichandame/shooter
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password : ${{ secrets.DOCKER_PASSWORD }}
