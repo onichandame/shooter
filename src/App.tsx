@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import Canvas from './Canvas'
+import Game from './Game'
 
 function App() {
   return (
-    <div className="App">
-      canvas:
-      <Canvas />
+    <div style={{border:'solid red 1px',width:'750px',height:'500px'}} className="App">
+      game:
+      <Game />
     </div>
   );
 }
