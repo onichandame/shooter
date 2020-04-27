@@ -7,35 +7,12 @@
     {
       "name": "Scene",
       "nodes": [
-        0,
-        1
+        2
       ]
     }
   ],
   "scene": 0,
   "nodes": [
-    {
-      "matrix": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        2.370673996065441,
-        1.971437651984926,
-        2.5889963216596925,
-        1
-      ],
-      "name": "Torus",
-      "mesh": 0
-    },
     {
       "matrix": [
         1,
@@ -56,13 +33,82 @@
         1
       ],
       "name": "PointLight",
+      "extras": {
+        "name": "PointLight"
+      },
       "extensions": {
         "KHR_lights_punctual": {
           "light": 0
         }
       }
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2.370673996065441,
+        1.971437651984926,
+        2.5889963216596925,
+        1
+      ],
+      "name": "Torus",
+      "extras": {
+        "name": "Torus"
+      },
+      "mesh": 0
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.228662398303226,
+        0.1322137307745938,
+        -0.06610686538729695,
+        1
+      ],
+      "name": "scene.gltf",
+      "children": [
+        0,
+        1
+      ]
     }
   ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "name": "PointLight",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "intensity": 1,
+          "type": "point"
+        }
+      ]
+    }
+  },
   "bufferViews": [
     {
       "buffer": 0,
@@ -193,22 +239,6 @@
       ]
     }
   ],
-  "extensions": {
-    "KHR_lights_punctual": {
-      "lights": [
-        {
-          "name": "PointLight",
-          "color": [
-            1,
-            1,
-            1
-          ],
-          "intensity": 1,
-          "type": "point"
-        }
-      ]
-    }
-  },
   "extensionsUsed": [
     "KHR_lights_punctual"
   ]

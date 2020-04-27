@@ -1,13 +1,21 @@
-import React, {FC,useState, useRef,Suspense}  from 'react'
-import {Canvas,useFrame,useLoader} from 'react-three-fiber'
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
+import React, { FC, Suspense } from 'react'
+import { Canvas } from 'react-three-fiber'
 
-import {} from './Model'
+import Model from './Model'
 
-const Game:FC = ()=>{
-  const gltf=useLoader(GLTFLoader,'/scene.gltf')
+const Game: FC = () => {
   return (
-    <primitive object={gltf.scene} dispose={null}/>
+    <Canvas
+      camera={{
+        fov: 75,
+        near: 0.1,
+        far: 1000
+      }}
+    >
+      <Suspense fallback={'loading'}>
+        <Model />
+      </Suspense>
+    </Canvas>
   )
 }
 
