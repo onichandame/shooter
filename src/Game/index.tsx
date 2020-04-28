@@ -7,6 +7,7 @@ const Game: FC = () => {
   return (
     <Canvas
       camera={{
+        position: [0, 3, 5],
         fov: 75,
         near: 0.1,
         far: 1000
